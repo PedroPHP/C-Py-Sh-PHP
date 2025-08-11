@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import requests
 
-site = request.get("http://businescorp.com.br")
+site = request.get("Seu site aqui")
 status = site.status_code
 
 if (status == 200):
