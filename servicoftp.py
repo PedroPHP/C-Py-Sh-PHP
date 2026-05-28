@@ -11,11 +11,11 @@ banner = meusocket.recv(1024)
 print (banner)
 
 print ("Enviando usuario")
-meusocket.send(str.encode("USER ricardo\r \n"))
+meusocket.send(str.encode("USER teste\r \n"))
 banner = meusocket.recv(1024)
 print (banner)
 
 print ("Enviando senha")
-meusocket.send(str.encode("pass ricardo\r \n"))
+meusocket.send(str.encode("pass teste\r \n"))
 banner = meusocket.recv(1024)
 print (banner)
