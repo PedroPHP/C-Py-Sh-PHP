@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ "$1" == "" ]
 then
-echo "Desec security - portscan network"
+echo "portscan network"
 echo "Modo de uso: $0 Rede porta"
 echo "Exemplo: $0 192.168.0 80"
 else
